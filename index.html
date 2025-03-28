@@ -1327,6 +1327,7 @@
         }
     </style>
 
+
     <!-- Critical inline JS -->
     <script>
         // Check for dark mode preference
@@ -1461,11 +1462,8 @@
                     </div>
 
                     <iframe src="https://games.crazygames.com/en_US/bloxdhop-io/index.html?v=1.327" class="game-frame"
-                        id="gameFrame" title="Minecraft Games"
-                        allow="fullscreen; autoplay; clipboard-read; clipboard-write; gamepad; microphone; cross-origin-isolated; web-share"
-                        allowfullscreen="true"
-                        style="width: 100%; height: 100%; border: none; max-width: 100vw; max-height: 80vh;"
-                        sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-modals allow-pointer-lock allow-presentation allow-downloads allow-orientation-lock">
+                        id="gameFrame" title="Minecraft Games" allowfullscreen
+                        sandbox="allow-forms allow-scripts allow-same-origin allow-popups">
                     </iframe>
 
                 </div>
@@ -2491,199 +2489,213 @@
 
     <!-- Main JavaScript -->
     <script>
-        // DOM Elements
-        const gameLoader = document.getElementById('gameLoader');
-        const gameFrame = document.getElementById('gameFrame');
-        const refreshBtn = document.getElementById('refreshBtn');
-        const fullscreenBtn = document.getElementById('fullscreenBtn');
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navLinks = document.getElementById('navLinks');
-        const themeToggle = document.getElementById('themeToggle');
-        const sunIcon = document.querySelector('.sun-icon');
-        const moonIcon = document.querySelector('.moon-icon');
-        const cookieConsent = document.getElementById('cookieConsent');
-        const acceptCookiesBtn = document.getElementById('acceptCookies');
-        const declineCookiesBtn = document.getElementById('declineCookies');
-        const faqQuestions = document.querySelectorAll('.faq-question');
-
-
-        // Mobile device detection and handling
+        // Device detection function
         function isMobileDevice() {
             return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
         }
 
+        // Ensure our code runs after DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            // DOM Elements
+            const gameContainer = document.getElementById('gameContainer');
+            const gameLoader = document.getElementById('gameLoader');
+            const gameFrame = document.getElementById('gameFrame');
+            const refreshBtn = document.getElementById('refreshBtn');
+            const fullscreenBtn = document.getElementById('fullscreenBtn');
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.getElementById('navLinks');
+            const themeToggle = document.getElementById('themeToggle');
+            const sunIcon = document.querySelector('.sun-icon');
+            const moonIcon = document.querySelector('.moon-icon');
+            const cookieConsent = document.getElementById('cookieConsent');
+            const acceptCookiesBtn = document.getElementById('acceptCookies');
+            const declineCookiesBtn = document.getElementById('declineCookies');
+            const faqQuestions = document.querySelectorAll('.faq-question');
 
-        // Game Loading
-        window.addEventListener('load', () => {
+            // Fix iframe for mobile if needed
+            if (gameFrame && gameContainer && gameLoader) {
+                if (isMobileDevice()) {
+                    console.log("Mobile device detected, enhancing iframe");
 
-            if (isMobileDevice()) {
-                // Apply mobile-specific adjustments
-                const gameFrame = document.getElementById('gameFrame');
-                gameFrame.style.height = '100%';
+                    // Apply mobile optimizations
+                    gameFrame.style.height = '100%';
+                    gameFrame.style.width = '100%';
 
-                // Add more mobile-specific error handling
-                gameFrame.onerror = function () {
-                    console.log('Game frame error on mobile');
-                    // Attempt to reload with alternative URL or parameters
-                    gameFrame.src = gameFrame.src + '&mobile=true';
-                };
+                    // Add enhanced permissions for mobile
+                    gameFrame.setAttribute('allow', 'fullscreen; autoplay; clipboard-read; clipboard-write');
+                    gameFrame.setAttribute('allowfullscreen', 'true');
+                    gameFrame.setAttribute('sandbox', 'allow-forms allow-scripts allow-same-origin allow-popups allow-modals allow-pointer-lock');
 
-                // Some games require touch events to be passed
-                gameFrame.setAttribute('allow', 'fullscreen; autoplay; clipboard-read; clipboard-write');
-            }
-
-
-            // Hide loader after game is loaded
-            gameFrame.addEventListener('load', () => {
-                setTimeout(() => {
-                    gameLoader.classList.add('hidden');
-                }, 1000);
-            });
-
-            // Reload game if it doesn't load within 10 seconds
-            const gameLoadTimeout = setTimeout(() => {
-                if (!gameLoader.classList.contains('hidden')) {
-                    gameFrame.src = gameFrame.src;
-                }
-            }, 10000);
-        });
-
-        // Game Controls
-        refreshBtn.addEventListener('click', () => {
-            gameLoader.classList.remove('hidden');
-            gameFrame.src = gameFrame.src;
-        });
-
-        fullscreenBtn.addEventListener('click', () => {
-            if (gameFrame.requestFullscreen) {
-                gameFrame.requestFullscreen();
-            } else if (gameFrame.webkitRequestFullscreen) {
-                gameFrame.webkitRequestFullscreen();
-            } else if (gameFrame.msRequestFullscreen) {
-                gameFrame.msRequestFullscreen();
-            }
-        });
-
-        // Mobile Menu Toggle
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Theme Toggle
-        themeToggle.addEventListener('click', () => {
-            document.documentElement.classList.toggle('dark');
-
-            // Toggle icons
-            if (document.documentElement.classList.contains('dark')) {
-                sunIcon.style.display = 'none';
-                moonIcon.style.display = 'block';
-                localStorage.theme = 'dark';
-            } else {
-                sunIcon.style.display = 'block';
-                moonIcon.style.display = 'none';
-                localStorage.theme = 'light';
-            }
-        });
-
-        // Initialize theme based on stored preference
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-            sunIcon.style.display = 'none';
-            moonIcon.style.display = 'block';
-        } else {
-            document.documentElement.classList.remove('dark');
-            sunIcon.style.display = 'block';
-            moonIcon.style.display = 'none';
-        }
-
-        // Cookie Consent
-        if (!localStorage.getItem('cookieConsent')) {
-            setTimeout(() => {
-                cookieConsent.classList.add('active');
-            }, 2000);
-        }
-
-        acceptCookiesBtn.addEventListener('click', () => {
-            localStorage.setItem('cookieConsent', 'accepted');
-            cookieConsent.classList.remove('active');
-        });
-
-        declineCookiesBtn.addEventListener('click', () => {
-            localStorage.setItem('cookieConsent', 'declined');
-            cookieConsent.classList.remove('active');
-        });
-
-        // FAQ Accordion
-        faqQuestions.forEach(question => {
-            question.addEventListener('click', () => {
-                const faqItem = question.parentElement;
-                faqItem.classList.toggle('active');
-            });
-        });
-
-        // Social Share Buttons
-        document.getElementById('shareTwitter').addEventListener('click', () => {
-            window.open(`https://twitter.com/intent/tweet?text=Check out these awesome Minecraft Games!&url=${encodeURIComponent(window.location.href)}`, '_blank');
-        });
-
-        document.getElementById('shareFacebook').addEventListener('click', () => {
-            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`, '_blank');
-        });
-
-        document.getElementById('shareLinkedIn').addEventListener('click', () => {
-            window.open(`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(window.location.href)}&title=Minecraft Games&summary=Free online Minecraft-style games`, '_blank');
-        });
-
-        document.getElementById('shareReddit').addEventListener('click', () => {
-            window.open(`https://www.reddit.com/submit?url=${encodeURIComponent(window.location.href)}&title=Minecraft Games`, '_blank');
-        });
-
-        document.getElementById('shareTikTok').addEventListener('click', () => {
-            alert('Share to TikTok functionality is coming soon!');
-        });
-
-        // Fix iframe loading issues
-        const fixIframeLoading = () => {
-            if (gameFrame.getAttribute('src') === 'about:blank' || !gameFrame.getAttribute('src')) {
-                gameFrame.setAttribute('src', 'https://games.crazygames.com/en_US/bloxdhop-io/index.html?v=1.327');
-            }
-
-            // Try alternative game if primary game doesn't load
-            const checkGameLoaded = setTimeout(() => {
-                if (!gameLoader.classList.contains('hidden')) {
-                    console.log('Game failed to load, trying alternative source...');
-                    gameFrame.setAttribute('src', 'https://games.crazygames.com/en_US/minecraft-classic/index.html');
-                }
-            }, 15000);
-        };
-
-        // Initialize iframe fix
-        fixIframeLoading();
-
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                // Special case for #top to scroll to the top of the page
-                if (this.getAttribute('href') === '#top') {
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
+                    // Fix source URL if needed
+                    if (gameFrame.getAttribute('src') === 'about:blank' || !gameFrame.getAttribute('src')) {
+                        gameFrame.setAttribute('src', 'https://games.crazygames.com/en_US/bloxdhop-io/index.html?v=1.327');
+                    }
                 } else {
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
+                    console.log("Desktop device detected, using standard iframe");
                 }
 
-                // Close mobile menu if open
-                if (navLinks.classList.contains('active')) {
-                    navLinks.classList.remove('active');
+                // Common frame loading events
+                gameFrame.addEventListener('load', function () {
+                    console.log("Game frame loaded");
+                    setTimeout(function () {
+                        gameLoader.classList.add('hidden');
+                    }, 1000);
+                });
+
+                // Fix for reloading on timeout
+                setTimeout(function () {
+                    if (!gameLoader.classList.contains('hidden')) {
+                        console.log("Game load timeout, reloading frame");
+                        gameFrame.src = gameFrame.src;
+                    }
+                }, 10000);
+            } else {
+                console.error("Required game elements not found");
+            }
+
+            // Game Controls
+            if (refreshBtn) {
+                refreshBtn.addEventListener('click', function () {
+                    if (gameLoader) gameLoader.classList.remove('hidden');
+                    if (gameFrame) gameFrame.src = gameFrame.src;
+                });
+            }
+
+            if (fullscreenBtn && gameFrame) {
+                fullscreenBtn.addEventListener('click', function () {
+                    if (gameFrame.requestFullscreen) {
+                        gameFrame.requestFullscreen();
+                    } else if (gameFrame.webkitRequestFullscreen) {
+                        gameFrame.webkitRequestFullscreen();
+                    } else if (gameFrame.msRequestFullscreen) {
+                        gameFrame.msRequestFullscreen();
+                    }
+                });
+            }
+
+            // Mobile Menu Toggle
+            if (mobileMenuBtn && navLinks) {
+                mobileMenuBtn.addEventListener('click', function () {
+                    navLinks.classList.toggle('active');
+                });
+            }
+
+            // Theme Toggle
+            if (themeToggle && sunIcon && moonIcon) {
+                themeToggle.addEventListener('click', function () {
+                    document.documentElement.classList.toggle('dark');
+
+                    // Toggle icons
+                    if (document.documentElement.classList.contains('dark')) {
+                        sunIcon.style.display = 'none';
+                        moonIcon.style.display = 'block';
+                        localStorage.theme = 'dark';
+                    } else {
+                        sunIcon.style.display = 'block';
+                        moonIcon.style.display = 'none';
+                        localStorage.theme = 'light';
+                    }
+                });
+
+                // Initialize theme based on stored preference
+                if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark');
+                    sunIcon.style.display = 'none';
+                    moonIcon.style.display = 'block';
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    sunIcon.style.display = 'block';
+                    moonIcon.style.display = 'none';
+                }
+            }
+
+            // Cookie Consent
+            if (cookieConsent && acceptCookiesBtn && declineCookiesBtn) {
+                if (!localStorage.getItem('cookieConsent')) {
+                    setTimeout(function () {
+                        cookieConsent.classList.add('active');
+                    }, 2000);
+                }
+
+                acceptCookiesBtn.addEventListener('click', function () {
+                    localStorage.setItem('cookieConsent', 'accepted');
+                    cookieConsent.classList.remove('active');
+                });
+
+                declineCookiesBtn.addEventListener('click', function () {
+                    localStorage.setItem('cookieConsent', 'declined');
+                    cookieConsent.classList.remove('active');
+                });
+            }
+
+            // FAQ Accordion
+            if (faqQuestions && faqQuestions.length > 0) {
+                faqQuestions.forEach(function (question) {
+                    question.addEventListener('click', function () {
+                        const faqItem = question.parentElement;
+                        faqItem.classList.toggle('active');
+                    });
+                });
+            }
+
+            // Social Share Buttons
+            const socialButtons = {
+                'shareTwitter': function () {
+                    window.open(`https://twitter.com/intent/tweet?text=Check out these awesome Minecraft Games!&url=${encodeURIComponent(window.location.href)}`, '_blank');
+                },
+                'shareFacebook': function () {
+                    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`, '_blank');
+                },
+                'shareLinkedIn': function () {
+                    window.open(`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(window.location.href)}&title=Minecraft Games&summary=Free online Minecraft-style games`, '_blank');
+                },
+                'shareReddit': function () {
+                    window.open(`https://www.reddit.com/submit?url=${encodeURIComponent(window.location.href)}&title=Minecraft Games`, '_blank');
+                },
+                'shareTikTok': function () {
+                    alert('Share to TikTok functionality is coming soon!');
+                }
+            };
+
+            // Add social share button event listeners
+            Object.keys(socialButtons).forEach(function (id) {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.addEventListener('click', socialButtons[id]);
                 }
             });
+
+            // Smooth scroll for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    // Special case for #top to scroll to the top of the page
+                    if (this.getAttribute('href') === '#top') {
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    } else {
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+
+                    // Close mobile menu if open
+                    if (navLinks && navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                    }
+                });
+            });
         });
-    </script>
+
+
+
+    </script
 </body>
 
 </html>
