@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Articles & Guides - minecraft-games.net</title>
+    <meta name="description" content="Explore our collection of Minecraft articles, guides, tips, and news to enhance your Minecraft gaming experience.">
+    <meta name="keywords" content="minecraft articles, minecraft guides, minecraft tips, minecraft news, minecraft tutorials">
+    <link rel="canonical" href="https://minecraft-games.net/articles/index.html">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/article.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://minecraft-games.net/articles/index.html">
+    <meta property="og:title" content="Minecraft Articles & Guides - minecraft-games.net">
+    <meta property="og:description" content="Explore our collection of Minecraft articles, guides, tips, and news to enhance your Minecraft gaming experience.">
+    <meta property="og:image" content="https://minecraft-games.net/images/og-image-articles.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://minecraft-games.net/articles/index.html">
+    <meta property="twitter:title" content="Minecraft Articles & Guides - minecraft-games.net">
+    <meta property="twitter:description" content="Explore our collection of Minecraft articles, guides, tips, and news to enhance your Minecraft gaming experience.">
+    <meta property="twitter:image" content="https://minecraft-games.net/images/og-image-articles.jpg">
+    
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://minecraft-games.net/articles/index.html"
+      },
+      "headline": "Minecraft Articles & Guides",
+      "description": "Explore our collection of Minecraft articles, guides, tips, and news to enhance your Minecraft gaming experience.",
+      "image": "https://minecraft-games.net/images/og-image-articles.jpg",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Minecraft Games",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://minecraft-games.net/images/logo.png"
+        }
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+    
+    <!-- Dark/Light Mode Toggle -->
+    <div class="mode-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+    
+    <!-- Cookie Consent -->
+    <div class="cookie-consent">
+        <div class="cookie-text">
+            <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+        </div>
+        <div class="cookie-btns">
+            <button class="cookie-btn accept-btn">Accept</button>
+            <button class="cookie-btn reject-btn">Reject</button>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><a href="../index.html">Minecraft Games</a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../categories/building.html">Building</a></li>
+                    <li><a href="../categories/survival.html">Survival</a></li>
+                    <li><a href="../categories/adventure.html">Adventure</a></li>
+                    <li><a href="../categories/pvp.html">PvP</a></li>
+                    <li><a href="index.html" class="active">Articles</a></li>
+                    <li><a href="../about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="articles-header">
+        <div class="container">
+            <h1>Minecraft Articles & Guides</h1>
+            <p>Discover tips, strategies, and insights to improve your Minecraft gaming experience</p>
+            
+            <div class="article-search-container">
+                <input type="text" id="article-search" placeholder="Search articles...">
+                <button id="search-button"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+    
+    <section class="articles-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-button active" data-filter="all">All Articles</button>
+                <button class="filter-button" data-filter="guides">Guides</button>
+                <button class="filter-button" data-filter="news">News</button>
+                <button class="filter-button" data-filter="reviews">Reviews</button>
+                <button class="filter-button" data-filter="tips">Tips & Tricks</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="articles-content">
+        <div class="container">
+            <div class="articles-grid" id="articles-container">
+                <!-- Page 1: Articles -->
+                <!-- Article 1 -->
+                <article class="article-card" data-category="guides" data-page="1">
+                    <div class="article-thumbnail">
+                        <a href="building-guide.html">
+                            <img src="images/building-guide-featured.jpg" alt="Minecraft Building Guide">
+                        </a>
+                    </div>
+                    <div class="article-info">
+                        <span class="article-category">Guides</span>
+                        <h2 class="article-title"><a href="building-guide.html">Ultimate Minecraft Building Guide: From Basic Structures to Masterpieces</a></h2>
+                        <p class="article-description">Learn essential building techniques, design principles, and creative tips to transform your Minecraft constructions from simple shelters to architectural wonders.</p>
+                        <div class="article-meta">
+                            <span class="article-author"><i class="fas fa-user"></i> Steve Crafter</span>
+                            <span class="article-date"><i class="fas fa-calendar"></i> June 15, 2023</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 2 -->
+                <article class="article-card" data-category="reviews" data-page="1">
+                    <div class="article-thumbnail">
+                        <a href="best-survival-mods.html">
+                            <img src="images/survival-mods-thumb.jpg" alt="Best Survival Mods">
+                        </a>
+                    </div>
+                    <div class="article-info">
+                        <span class="article-category">Reviews</span>
+                        <h2 class="article-title"><a href="best-survival-mods.html">Top 15 Survival Mods That Transform Your Minecraft Experience</a></h2>
+                        <p class="article-description">Our comprehensive review of the most engaging survival mods that add new challenges, mechanics, and content to enhance your Minecraft survival gameplay.</p>
+                        <div class="article-meta">
+                            <span class="article-author"><i class="fas fa-user"></i> Alex Miner</span>
+                            <span class="article-date"><i class="fas fa-calendar"></i> May 28, 2023</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 3 -->
+                <article class="article-card" data-category="tips" data-page="1">
+                    <div class="article-thumbnail">
+                        <a href="redstone-basics.html">
+                            <img src="images/redstone-basics-thumb.jpg" alt="Redstone Basics">
+                        </a>
+                    </div>
+                    <div class="article-info">
+                        <span class="article-category">Tips & Tricks</span>
+                        <h2 class="article-title"><a href="redstone-basics.html">Redstone 101: Essential Circuits Every Minecrafter Should Know</a></h2>
+                        <p class="article-description">Master the basics of Minecraft's redstone system with these simple but powerful circuit designs that will kickstart your automation projects.</p>
+                        <div class="article-meta">
+                            <span class="article-author"><i class="fas fa-user"></i> Redstone Engineer</span>
+                            <span class="article-date"><i class="fas fa-calendar"></i> May 15, 2023</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 4 -->
+                <article class="article-card" data-category="news" data-page="1">
+                    <div class="article-thumbnail">
+                        <a href="minecraft-update-news.html">
+                            <img src="images/minecraft-update-thumb.jpg" alt="Minecraft Update News">
+                        </a>
+                    </div>
+                    <div class="article-info">
+                        <span class="article-category">News</span>
+                        <h2 class="article-title"><a href="minecraft-update-news.html">Everything We Know About Minecraft's Next Major Update</a></h2>
+                        <p class="article-description">Get the latest information on upcoming features, mobs, biomes, and changes coming to Minecraft in the next significant update.</p>
+                        <div class="article-meta">
+                            <span class="article-author"><i class="fas fa-user"></i> News Miner</span>
+                            <span class="article-date"><i class="fas fa-calendar"></i> May 5, 2023</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 5 -->
+                <article class="article-card" data-category="reviews" data-page="1">
+                    <div class="article-thumbnail">
+                        <a href="best-texture-packs.html">
+                            <img src="images/texture-packs-thumb.jpg" alt="Best Texture Packs">
+                        </a>
+                    </div>
+                    <div class="article-info">
+                        <span class="article-category">Reviews</span>
+                        <h2 class="article-title"><a href="best-texture-packs.html">10 Best Texture Packs for Completely Changing Your Minecraft Look</a></h2>
+                        <p class="article-description">Discover texture packs that range from realistic to cartoonish, medieval to futuristic, and find the perfect visual style for your Minecraft world.</p>
+                        <div class="article-meta">
+                            <span class="article-author"><i class="fas fa-user"></i> Texture Artist</span>
+                            <span class="article-date"><i class="fas fa-calendar"></i> April 22, 2023</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 6 -->
+                <article class="article-card" data-category="guides" data-page="1">
+                    <div class="article-thumbnail">
+                        <a href="farming-guide.html">
+                            <img src="images/farming-guide-thumb.jpg" alt="Farming Guide">
+                        </a>
+                    </div>
+                    <div class="article-info">
+                        <span class="article-category">Guides</span>
+                        <h2 class="article-title"><a href="farming-guide.html">Advanced Farming Techniques: Maximize Your Crop Yields</a></h2>
+                        <p class="article-description">Learn how to create efficient and automated farms for all crop types, with designs ranging from simple to complex redstone-powered systems.</p>
+                        <div class="article-meta">
+                            <span class="article-author"><i class="fas fa-user"></i> Farmer Joe</span>
+                            <span class="article-date"><i class="fas fa-calendar"></i> April 15, 2023</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Page 2: Articles - initially hidden -->
+                <!-- Article 7 -->
+                <article class="article-card" data-category="tips" data-page="2" style="display: none;">
+                    <div class="article-thumbnail">
+                        <a href="enchanting-tips.html">
+                            <img src="images/enchanting-tips-thumb.jpg" alt="Enchanting Tips">
+                        </a>
+                    </div>
+                    <div class="article-info">
+                        <span class="article-category">Tips & Tricks</span>
+                        <h2 class="article-title"><a href="enchanting-tips.html">The Complete Guide to Enchanting: Getting the Perfect Gear</a></h2>
+                        <p class="article-description">Master the art of enchanting in Minecraft with this comprehensive guide to getting the best enchantments for your tools, weapons, and armor.</p>
+                        <div class="article-meta">
+                            <span class="article-author"><i class="fas fa-user"></i> Enchanter Master</span>
+                            <span class="article-date"><i class="fas fa-calendar"></i> April 8, 2023</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 8 -->
+                <article class="article-card" data-category="news" data-page="2" style="display: none;">
+                    <div class="article-thumbnail">
+                        <a href="minecraft-community-projects.html">
+                            <img src="images/community-projects-thumb.jpg" alt="Community Projects">
+                        </a>
+                    </div>
+                    <div class="article-info">
+                        <span class="article-category">News</span>
+                        <h2 class="article-title"><a href="minecraft-community-projects.html">Amazing Community Projects That Will Blow Your Mind</a></h2>
+                        <p class="article-description">Check out these incredible Minecraft builds created by the community, from massive cities to functioning computers built with redstone.</p>
+                        <div class="article-meta">
+                            <span class="article-author"><i class="fas fa-user"></i> Community Manager</span>
+                            <span class="article-date"><i class="fas fa-calendar"></i> March 30, 2023</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- More articles for page 2 -->
+                <!-- Article 9-12 would go here -->
+                
+                <!-- Page 3: Articles - initially hidden -->
+                <!-- Article 13 -->
+                <article class="article-card" data-category="guides" data-page="3" style="display: none;">
+                    <div class="article-thumbnail">
+                        <a href="mob-farm-designs.html">
+                            <img src="images/mob-farm-thumb.jpg" alt="Mob Farm Designs">
+                        </a>
+                    </div>
+                    <div class="article-info">
+                        <span class="article-category">Guides</span>
+                        <h2 class="article-title"><a href="mob-farm-designs.html">5 Efficient Mob Farm Designs for Every Minecraft Player</a></h2>
+                        <p class="article-description">From simple starter designs to advanced endgame XP farms, these mob farm blueprints will help you gather resources efficiently.</p>
+                        <div class="article-meta">
+                            <span class="article-author"><i class="fas fa-user"></i> XP Hunter</span>
+                            <span class="article-date"><i class="fas fa-calendar"></i> March 15, 2023</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- More articles for page 3 would go here -->
+            </div>
+            
+            <!-- Pagination Controls -->
+            <div class="pagination">
+                <button class="pagination-button active" data-page="1">1</button>
+                <button class="pagination-button" data-page="2">2</button>
+                <button class="pagination-button" data-page="3">3</button>
+                <button class="pagination-next-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Minecraft Games</h2>
+                    <p>The best collection of free Minecraft-style games that you can play directly in your browser without downloads.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                        <li><a href="../privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-categories">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="../categories/building.html">Building</a></li>
+                        <li><a href="../categories/survival.html">Survival</a></li>
+                        <li><a href="../categories/adventure.html">Adventure</a></li>
+                        <li><a href="../categories/pvp.html">PvP</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 minecraft-games.net. All rights reserved. This website is not affiliated with Mojang AB.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Loading Animation
+        window.addEventListener('load', function() {
+            const loader = document.querySelector('.loader-container');
+            loader.style.opacity = '0';
+            setTimeout(function() {
+                loader.style.display = 'none';
+            }, 500);
+        });
+        
+        // Dark/Light Mode Toggle
+        const modeToggle = document.querySelector('.mode-toggle');
+        const modeIcon = modeToggle.querySelector('i');
+        
+        function setDarkMode(isDark) {
+            if (isDark) {
+                document.body.classList.add('dark-mode');
+                modeIcon.classList.remove('fa-moon');
+                modeIcon.classList.add('fa-sun');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                document.body.classList.remove('dark-mode');
+                modeIcon.classList.remove('fa-sun');
+                modeIcon.classList.add('fa-moon');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        }
+        
+        // Check if user previously enabled dark mode
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            setDarkMode(true);
+        }
+        
+        modeToggle.addEventListener('click', function() {
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            setDarkMode(!isDarkMode);
+        });
+        
+        // Cookie Consent
+        const cookieConsent = document.querySelector('.cookie-consent');
+        const acceptBtn = document.querySelector('.accept-btn');
+        const rejectBtn = document.querySelector('.reject-btn');
+        
+        // Show cookie consent if not already accepted
+        if (!localStorage.getItem('cookieConsent')) {
+            setTimeout(function() {
+                cookieConsent.classList.add('show');
+            }, 2000);
+        }
+        
+        acceptBtn.addEventListener('click', function() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            cookieConsent.classList.remove('show');
+        });
+        
+        rejectBtn.addEventListener('click', function() {
+            localStorage.setItem('cookieConsent', 'rejected');
+            cookieConsent.classList.remove('show');
+        });
+
+        // Article Filtering
+        const filterButtons = document.querySelectorAll('.filter-button');
+        const articleCards = document.querySelectorAll('.article-card');
+        const paginationButtons = document.querySelectorAll('.pagination-button');
+        let currentPage = 1;
+        let currentFilter = 'all';
+        
+        // Initialize pagination
+        function updatePagination() {
+            // Reset all pagination buttons
+            paginationButtons.forEach(btn => {
+                btn.classList.remove('active');
+                if (parseInt(btn.getAttribute('data-page')) === currentPage) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            // Show current page articles that match the filter
+            articleCards.forEach(card => {
+                const cardPage = parseInt(card.getAttribute('data-page'));
+                const cardCategory = card.getAttribute('data-category');
+                
+                if (cardPage === currentPage && (currentFilter === 'all' || cardCategory === currentFilter)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+        
+        // Handle filter button clicks
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+                currentFilter = filter;
+                currentPage = 1; // Reset to first page when changing filters
+                
+                // Update active filter button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                updatePagination();
+            });
+        });
+        
+        // Handle pagination clicks
+        paginationButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                currentPage = parseInt(this.getAttribute('data-page'));
+                updatePagination();
+            });
+        });
+        
+        // Next button functionality
+        const nextButton = document.querySelector('.pagination-next-btn');
+        if (nextButton) {
+            nextButton.addEventListener('click', function() {
+                const maxPage = Math.max(...Array.from(paginationButtons).map(btn => 
+                    parseInt(btn.getAttribute('data-page'))));
+                
+                if (currentPage < maxPage) {
+                    currentPage++;
+                    updatePagination();
+                }
+            });
+        }
+        
+        // Initialize the page
+        updatePagination();
+        
+        // Search functionality
+        const searchInput = document.getElementById('article-search');
+        const searchButton = document.getElementById('search-button');
+        
+        function searchArticles() {
+            const searchTerm = searchInput.value.toLowerCase();
+            
+            if (searchTerm.trim() === '') {
+                // If search is empty, restore filter view
+                currentFilter = document.querySelector('.filter-button.active').getAttribute('data-filter');
+                updatePagination();
+                return;
+            }
+            
+            // Hide all articles first
+            articleCards.forEach(card => {
+                card.style.display = 'none';
+            });
+            
+            // Show matching articles regardless of page or category
+            articleCards.forEach(card => {
+                const title = card.querySelector('.article-title').textContent.toLowerCase();
+                const description = card.querySelector('.article-description').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = '';
+                }
+            });
+            
+            // Disable pagination during search
+            paginationButtons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+        }
+        
+        searchButton.addEventListener('click', searchArticles);
+        searchInput.addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') {
+                searchArticles();
+            }
+        });
+        
+        // Clear search when clicking on filters
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                searchInput.value = '';
+            });
+        });
+    </script>
+    
+    <style>
+        /* Dark Mode Styles for Articles */
+        body.dark-mode .articles-header {
+            background-color: #2a2a2a;
+        }
+        
+        body.dark-mode .article-search-container input {
+            background-color: #333;
+            color: #f0f0f0;
+            border-color: #444;
+        }
+        
+        body.dark-mode .article-search-container button {
+            background-color: #444;
+            color: #f0f0f0;
+        }
+        
+        body.dark-mode .articles-filter {
+            background-color: #222;
+        }
+        
+        body.dark-mode .filter-button {
+            background-color: #333;
+            color: #f0f0f0;
+        }
+        
+        body.dark-mode .filter-button.active {
+            background-color: var(--primary-color);
+        }
+        
+        body.dark-mode .article-card {
+            background-color: #2a2a2a;
+            border-color: #333;
+        }
+        
+        body.dark-mode .article-title a {
+            color: #f0f0f0;
+        }
+        
+        body.dark-mode .article-description {
+            color: #ccc;
+        }
+        
+        body.dark-mode .article-meta {
+            color: #aaa;
+        }
+        
+        body.dark-mode .pagination-button {
+            background-color: #333;
+            color: #f0f0f0;
+        }
+        
+        body.dark-mode .pagination-button.active {
+            background-color: var(--primary-color);
+        }
+    </style>
+    
+    <!-- 添加主脚本文件引用 -->
+    <script src="../js/script.js"></script>
+</body>
+</html> 

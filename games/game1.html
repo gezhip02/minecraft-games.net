@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Mania - Game Station</title>
+    <meta name="description" content="Play Puzzle Mania for free - A brain-teasing puzzle game with challenging levels!">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/game-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><a href="../index.html">Game Station</a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../categories/action.html">Action</a></li>
+                    <li><a href="../categories/puzzle.html" class="active">Puzzle</a></li>
+                    <li><a href="../categories/strategy.html">Strategy</a></li>
+                    <li><a href="../categories/sports.html">Sports</a></li>
+                    <li><a href="../categories/adventure.html">Adventure</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="game-container">
+        <div class="container">
+            <div class="game-header">
+                <h1 class="game-title">Puzzle Mania</h1>
+                <div class="game-meta">
+                    <span class="category">Puzzle</span>
+                    <span class="plays"><i class="fas fa-gamepad"></i> 12,487 Plays</span>
+                    <span class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        4.5/5
+                    </span>
+                </div>
+            </div>
+
+            <div class="game-frame-container">
+                <!-- Top right control buttons -->
+                <div class="game-top-controls">
+                    <button id="restart-btn" class="top-control-btn" title="Restart Game"><i class="fas fa-redo"></i></button>
+                    <button id="fullscreen-btn" class="top-control-btn" title="Fullscreen Mode"><i class="fas fa-expand"></i></button>
+                </div>
+                
+                <!-- Game iframe -->
+                <iframe id="game-frame" class="game-iframe" src="https://www.crazygames.com/embed/mahjong-dynasty" frameborder="0" allowfullscreen></iframe>
+                
+                <!-- Social sharing section -->
+                <div class="game-share-container">
+                    <div class="share-title">
+                        <i class="fas fa-share-alt"></i> Share this game with friends
+                    </div>
+                    <div class="social-share-buttons">
+                        <a href="#" id="twitter-share" class="social-share-btn twitter-btn" title="Share on Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" id="facebook-share" class="social-share-btn facebook-btn" title="Share on Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" id="linkedin-share" class="social-share-btn linkedin-btn" title="Share on LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" id="reddit-share" class="social-share-btn reddit-btn" title="Share on Reddit">
+                            <i class="fab fa-reddit-alien"></i>
+                        </a>
+                        <a href="#" id="tiktok-share" class="social-share-btn tiktok-btn" title="Share on TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-details">
+                <div class="game-description">
+                    <h2>About Puzzle Mania</h2>
+                    <p>
+                        Puzzle Mania is a brain-teasing puzzle game designed to challenge your logical thinking and problem-solving skills. With dozens of increasingly difficult levels, this game will keep your mind sharp and entertained for hours. Each puzzle presents a unique challenge, requiring careful thought and strategy to complete.
+                    </p>
+                    <p>
+                        As you progress through the game, you'll unlock new puzzle types and special items that add exciting new dimensions to gameplay. The vibrant graphics and soothing soundtrack create a perfect atmosphere for deep concentration and puzzle-solving satisfaction.
+                    </p>
+                    
+                    <h3>How to Play</h3>
+                    <ul class="instructions">
+                        <li><strong>Controls:</strong> Use your mouse to select and move pieces. Click to select a piece, then click again to place it.</li>
+                        <li><strong>Objective:</strong> Clear the board by matching identical pieces until no pieces remain.</li>
+                        <li><strong>Strategies:</strong> Look for moves that will open up the most options later. Focus on clearing pieces that block many other pieces.</li>
+                        <li><strong>Pro Tip:</strong> Always look for matching pairs around the edges of the board first.</li>
+                    </ul>
+                </div>
+                
+                <div class="game-sidebar">
+                    <div class="related-games">
+                        <h3>Similar Games</h3>
+                        <div class="related-games-list">
+                            <a href="game6.html" class="related-game">
+                                <img src="../images/thumbnails/game6.jpg" alt="Mahjong Masters">
+                                <span>Mahjong Masters</span>
+                            </a>
+                            <a href="game9.html" class="related-game">
+                                <img src="../images/thumbnails/game9.jpg" alt="Sudoku Challenge">
+                                <span>Sudoku Challenge</span>
+                            </a>
+                            <a href="game12.html" class="related-game">
+                                <img src="../images/thumbnails/game12.jpg" alt="Jewel Match">
+                                <span>Jewel Match</span>
+                            </a>
+                            <a href="game15.html" class="related-game">
+                                <img src="../images/thumbnails/game15.jpg" alt="Word Connect">
+                                <span>Word Connect</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Game Station</h2>
+                    <p>The best place for free online games</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                        <li><a href="../privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-categories">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="../categories/action.html">Action</a></li>
+                        <li><a href="../categories/puzzle.html">Puzzle</a></li>
+                        <li><a href="../categories/strategy.html">Strategy</a></li>
+                        <li><a href="../categories/sports.html">Sports</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Game Station. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // Game-specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track game play
+            gameStats.trackGamePlay('puzzle-mania');
+            
+            // Fullscreen functionality
+            const fullscreenBtn = document.getElementById('fullscreen-btn');
+            const gameFrame = document.getElementById('game-frame');
+            
+            if (fullscreenBtn && gameFrame) {
+                fullscreenBtn.addEventListener('click', function() {
+                    if (gameFrame.requestFullscreen) {
+                        gameFrame.requestFullscreen();
+                    } else if (gameFrame.mozRequestFullScreen) { /* Firefox */
+                        gameFrame.mozRequestFullScreen();
+                    } else if (gameFrame.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                        gameFrame.webkitRequestFullscreen();
+                    } else if (gameFrame.msRequestFullscreen) { /* IE/Edge */
+                        gameFrame.msRequestFullscreen();
+                    }
+                });
+            }
+            
+            // Restart game
+            const restartBtn = document.getElementById('restart-btn');
+            if (restartBtn && gameFrame) {
+                restartBtn.addEventListener('click', function() {
+                    gameFrame.src = gameFrame.src;
+                });
+            }
+            
+            // Social sharing functionality
+            const pageUrl = encodeURIComponent(window.location.href);
+            const pageTitle = encodeURIComponent(document.title);
+            const pageDesc = encodeURIComponent("Check out this awesome puzzle game I found!");
+            
+            // Twitter share
+            document.getElementById('twitter-share').addEventListener('click', function(e) {
+                e.preventDefault();
+                window.open(`https://twitter.com/intent/tweet?text=${pageDesc}&url=${pageUrl}`, '_blank', 'width=550,height=420');
+            });
+            
+            // Facebook share
+            document.getElementById('facebook-share').addEventListener('click', function(e) {
+                e.preventDefault();
+                window.open(`https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`, '_blank', 'width=550,height=420');
+            });
+            
+            // LinkedIn share
+            document.getElementById('linkedin-share').addEventListener('click', function(e) {
+                e.preventDefault();
+                window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`, '_blank', 'width=550,height=420');
+            });
+            
+            // Reddit share
+            document.getElementById('reddit-share').addEventListener('click', function(e) {
+                e.preventDefault();
+                window.open(`https://www.reddit.com/submit?url=${pageUrl}&title=${pageTitle}`, '_blank', 'width=550,height=420');
+            });
+            
+            // TikTok doesn't have a direct sharing API, so we'll copy the link instead
+            document.getElementById('tiktok-share').addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Create temporary input element
+                const tempInput = document.createElement('input');
+                document.body.appendChild(tempInput);
+                tempInput.value = window.location.href;
+                tempInput.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempInput);
+                
+                alert('Link copied to clipboard! You can now paste it in TikTok.');
+            });
+        });
+    </script>
+</body>
+</html> 
