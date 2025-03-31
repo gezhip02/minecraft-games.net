@@ -126,23 +126,11 @@
             </div>
             
             <div class="game-frame-container">
-                <div class="game-top-controls">
-                    <button class="top-control-btn fullscreen-btn" title="Fullscreen">
-                        <i class="fas fa-expand"></i>
-                    </button>
-                    <button class="top-control-btn reload-btn" title="Reload Game">
-                        <i class="fas fa-redo-alt"></i>
-                    </button>
-                </div>
-                
                 <iframe id="game-frame" class="game-iframe" src="https://example.com/games/blocky-craft" allowfullscreen></iframe>
                 
                 <div class="game-controls">
                     <button class="control-btn">
                         <i class="fas fa-gamepad"></i> How to Play
-                    </button>
-                    <button class="control-btn">
-                        <i class="fas fa-heart"></i> Add to Favorites
                     </button>
                     <button class="control-btn">
                         <i class="fas fa-expand"></i> Fullscreen
@@ -407,7 +395,7 @@
         });
         
         // Fullscreen functionality
-        const fullscreenBtns = document.querySelectorAll('.fullscreen-btn, .control-btn:nth-child(3)');
+        const fullscreenBtns = document.querySelectorAll('.fullscreen-btn, .control-btn:nth-child(2)');
         const gameFrame = document.getElementById('game-frame');
         
         fullscreenBtns.forEach(btn => {
@@ -424,13 +412,6 @@
             });
         });
         
-        // Reload game
-        const reloadBtn = document.querySelector('.reload-btn');
-        
-        reloadBtn.addEventListener('click', function() {
-            gameFrame.src = gameFrame.src;
-        });
-        
         // How to Play button
         const howToPlayBtn = document.querySelector('.control-btn:first-child');
         
@@ -438,26 +419,6 @@
             // Smooth scroll to instructions
             const instructions = document.querySelector('.instructions');
             instructions.scrollIntoView({ behavior: 'smooth' });
-        });
-        
-        // Add to favorites
-        const favBtn = document.querySelector('.control-btn:nth-child(2)');
-        
-        favBtn.addEventListener('click', function() {
-            this.classList.toggle('active');
-            const icon = this.querySelector('i');
-            
-            if (this.classList.contains('active')) {
-                icon.classList.remove('fa-heart');
-                icon.classList.add('fa-heart-broken');
-                this.innerHTML = '<i class="fas fa-heart-broken"></i> Remove Favorite';
-                alert('Game added to favorites!');
-            } else {
-                icon.classList.remove('fa-heart-broken');
-                icon.classList.add('fa-heart');
-                this.innerHTML = '<i class="fas fa-heart"></i> Add to Favorites';
-                alert('Game removed from favorites!');
-            }
         });
         
         // Social Share Buttons

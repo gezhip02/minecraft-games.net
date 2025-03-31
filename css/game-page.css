@@ -63,36 +63,9 @@
     margin-bottom: 15px;
 }
 
+/* Hide top control buttons */
 .game-top-controls {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    display: flex;
-    gap: 10px;
-    z-index: 10;
-}
-
-.top-control-btn {
-    background-color: rgba(52, 152, 219, 0.7);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    backdrop-filter: blur(2px);
-}
-
-.top-control-btn:hover {
-    background-color: rgba(41, 128, 185, 0.9);
-}
-
-.top-control-btn i {
-    font-size: 16px;
+    display: none;
 }
 
 .game-share-container {
