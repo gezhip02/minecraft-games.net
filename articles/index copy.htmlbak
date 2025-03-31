@@ -129,7 +129,7 @@
                     </div>
                     <div class="article-info">
                         <span class="article-category">Guides</span>
-                        <h2 class="article-title"><a href="top-10-puzzle-games.html">Top 10 Building Techniques Every Minecraft Player Should Know</a></h2>
+                        <h2 class="article-title"><a href="top-10-puzzle-games.html">Ultimate Minecraft Building Guide: From Basic Structures to Masterpieces</a></h2>
                         <p class="article-description">Learn essential building techniques, design principles, and creative tips to transform your Minecraft constructions from simple shelters to architectural wonders.</p>
                         <div class="article-meta">
                             <span class="article-author"><i class="fas fa-user"></i> Steve Crafter</span>
@@ -138,7 +138,156 @@
                     </div>
                 </article>
                 
-             
+                <!-- Article 2 -->
+                 
+                <article class="article-card" data-category="reviews" data-page="1">
+                    <div class="article-thumbnail">
+                        <a href="best-survival-mods.html">
+                            <img src="images/survival-mods-thumb.jpg" alt="Best Survival Mods">
+                        </a>
+                    </div>
+                    <div class="article-info">
+                        <span class="article-category">Reviews</span>
+                        <h2 class="article-title"><a href="best-survival-mods.html">Top 15 Survival Mods That Transform Your Minecraft Experience</a></h2>
+                        <p class="article-description">Our comprehensive review of the most engaging survival mods that add new challenges, mechanics, and content to enhance your Minecraft survival gameplay.</p>
+                        <div class="article-meta">
+                            <span class="article-author"><i class="fas fa-user"></i> Alex Miner</span>
+                            <span class="article-date"><i class="fas fa-calendar"></i> May 28, 2023</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 3 -->
+                <article class="article-card" data-category="tips" data-page="1">
+                    <div class="article-thumbnail">
+                        <a href="redstone-basics.html">
+                            <img src="images/redstone-basics-thumb.jpg" alt="Redstone Basics">
+                        </a>
+                    </div>
+                    <div class="article-info">
+                        <span class="article-category">Tips & Tricks</span>
+                        <h2 class="article-title"><a href="redstone-basics.html">Redstone 101: Essential Circuits Every Minecrafter Should Know</a></h2>
+                        <p class="article-description">Master the basics of Minecraft's redstone system with these simple but powerful circuit designs that will kickstart your automation projects.</p>
+                        <div class="article-meta">
+                            <span class="article-author"><i class="fas fa-user"></i> Redstone Engineer</span>
+                            <span class="article-date"><i class="fas fa-calendar"></i> May 15, 2023</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 4 -->
+                <article class="article-card" data-category="news" data-page="1">
+                    <div class="article-thumbnail">
+                        <a href="minecraft-update-news.html">
+                            <img src="images/minecraft-update-thumb.jpg" alt="Minecraft Update News">
+                        </a>
+                    </div>
+                    <div class="article-info">
+                        <span class="article-category">News</span>
+                        <h2 class="article-title"><a href="minecraft-update-news.html">Everything We Know About Minecraft's Next Major Update</a></h2>
+                        <p class="article-description">Get the latest information on upcoming features, mobs, biomes, and changes coming to Minecraft in the next significant update.</p>
+                        <div class="article-meta">
+                            <span class="article-author"><i class="fas fa-user"></i> News Miner</span>
+                            <span class="article-date"><i class="fas fa-calendar"></i> May 5, 2023</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 5 -->
+                <article class="article-card" data-category="reviews" data-page="1">
+                    <div class="article-thumbnail">
+                        <a href="best-texture-packs.html">
+                            <img src="images/texture-packs-thumb.jpg" alt="Best Texture Packs">
+                        </a>
+                    </div>
+                    <div class="article-info">
+                        <span class="article-category">Reviews</span>
+                        <h2 class="article-title"><a href="best-texture-packs.html">10 Best Texture Packs for Completely Changing Your Minecraft Look</a></h2>
+                        <p class="article-description">Discover texture packs that range from realistic to cartoonish, medieval to futuristic, and find the perfect visual style for your Minecraft world.</p>
+                        <div class="article-meta">
+                            <span class="article-author"><i class="fas fa-user"></i> Texture Artist</span>
+                            <span class="article-date"><i class="fas fa-calendar"></i> April 22, 2023</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 6 -->
+                <article class="article-card" data-category="guides" data-page="1">
+                    <div class="article-thumbnail">
+                        <a href="farming-guide.html">
+                            <img src="images/farming-guide-thumb.jpg" alt="Farming Guide">
+                        </a>
+                    </div>
+                    <div class="article-info">
+                        <span class="article-category">Guides</span>
+                        <h2 class="article-title"><a href="farming-guide.html">Advanced Farming Techniques: Maximize Your Crop Yields</a></h2>
+                        <p class="article-description">Learn how to create efficient and automated farms for all crop types, with designs ranging from simple to complex redstone-powered systems.</p>
+                        <div class="article-meta">
+                            <span class="article-author"><i class="fas fa-user"></i> Farmer Joe</span>
+                            <span class="article-date"><i class="fas fa-calendar"></i> April 15, 2023</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Page 2: Articles - initially hidden -->
+                <!-- Article 7 -->
+                <article class="article-card" data-category="tips" data-page="2" style="display: none;">
+                    <div class="article-thumbnail">
+                        <a href="enchanting-tips.html">
+                            <img src="images/enchanting-tips-thumb.jpg" alt="Enchanting Tips">
+                        </a>
+                    </div>
+                    <div class="article-info">
+                        <span class="article-category">Tips & Tricks</span>
+                        <h2 class="article-title"><a href="enchanting-tips.html">The Complete Guide to Enchanting: Getting the Perfect Gear</a></h2>
+                        <p class="article-description">Master the art of enchanting in Minecraft with this comprehensive guide to getting the best enchantments for your tools, weapons, and armor.</p>
+                        <div class="article-meta">
+                            <span class="article-author"><i class="fas fa-user"></i> Enchanter Master</span>
+                            <span class="article-date"><i class="fas fa-calendar"></i> April 8, 2023</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 8 -->
+                <article class="article-card" data-category="news" data-page="2" style="display: none;">
+                    <div class="article-thumbnail">
+                        <a href="minecraft-community-projects.html">
+                            <img src="images/community-projects-thumb.jpg" alt="Community Projects">
+                        </a>
+                    </div>
+                    <div class="article-info">
+                        <span class="article-category">News</span>
+                        <h2 class="article-title"><a href="minecraft-community-projects.html">Amazing Community Projects That Will Blow Your Mind</a></h2>
+                        <p class="article-description">Check out these incredible Minecraft builds created by the community, from massive cities to functioning computers built with redstone.</p>
+                        <div class="article-meta">
+                            <span class="article-author"><i class="fas fa-user"></i> Community Manager</span>
+                            <span class="article-date"><i class="fas fa-calendar"></i> March 30, 2023</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- More articles for page 2 -->
+                <!-- Article 9-12 would go here -->
+                
+                <!-- Page 3: Articles - initially hidden -->
+                <!-- Article 13 -->
+                <article class="article-card" data-category="guides" data-page="3" style="display: none;">
+                    <div class="article-thumbnail">
+                        <a href="mob-farm-designs.html">
+                            <img src="images/mob-farm-thumb.jpg" alt="Mob Farm Designs">
+                        </a>
+                    </div>
+                    <div class="article-info">
+                        <span class="article-category">Guides</span>
+                        <h2 class="article-title"><a href="mob-farm-designs.html">5 Efficient Mob Farm Designs for Every Minecraft Player</a></h2>
+                        <p class="article-description">From simple starter designs to advanced endgame XP farms, these mob farm blueprints will help you gather resources efficiently.</p>
+                        <div class="article-meta">
+                            <span class="article-author"><i class="fas fa-user"></i> XP Hunter</span>
+                            <span class="article-date"><i class="fas fa-calendar"></i> March 15, 2023</span>
+                        </div>
+                    </div>
+                </article>
+                
                 <!-- More articles for page 3 would go here -->
             </div>
             
