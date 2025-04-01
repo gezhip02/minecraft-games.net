@@ -1,0 +1,170 @@
+/* 临时修复以解决图片缺失问题 */
+.article-featured-image,
+.expert-avatar,
+.dev-avatar,
+.recipe-image,
+.recent-article-image,
+.author-image {
+    background-color: #e0e0e0;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.article-featured-image::before,
+.expert-avatar::before,
+.dev-avatar::before,
+.recipe-image::before,
+.recent-article-image::before,
+.author-image::before {
+    content: '图片占位符';
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+}
+
+.article-featured-image {
+    min-height: 300px;
+}
+
+.recipe-image {
+    min-height: 120px;
+    width: 100%;
+}
+
+.expert-avatar,
+.dev-avatar,
+.author-image {
+    min-height: 80px;
+    min-width: 80px;
+    border-radius: 50%;
+}
+
+.loader-container {
+    display: none !important;
+}
+
+/* 改进滚动和定位行为 */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* 与header高度匹配 */
+}
+
+/* 确保header不遮挡内容 */
+.article-container {
+    padding-top: 80px; /* 与header高度匹配 */
+}
+
+/* 改进目录样式 */
+.table-of-contents {
+    position: sticky;
+    top: 100px; /* header高度 + 额外空间 */
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    padding-right: 15px;
+    scrollbar-width: thin;
+}
+
+.table-of-contents::-webkit-scrollbar {
+    width: 6px;
+}
+
+.table-of-contents::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.table-of-contents::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.table-of-contents a {
+    position: relative;
+    padding: 6px 0;
+    margin: 4px 0;
+    display: block;
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.table-of-contents a:hover {
+    color: #419f3b;
+    padding-left: 5px;
+}
+
+.table-of-contents a.active {
+    color: #419f3b;
+    font-weight: 600;
+    padding-left: 10px;
+}
+
+.table-of-contents a.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 70%;
+    background-color: #419f3b;
+    border-radius: 2px;
+}
+
+/* 确保section标题有足够的上边距，避免被header遮挡 */
+h2[id] {
+    padding-top: 30px;
+    margin-top: -20px;
+}
+
+h3[id] {
+    padding-top: 25px;
+    margin-top: -15px;
+}
+
+/* 改进section之间的视觉分隔 */
+.article-main > section {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+/* 为锚点定位添加偏移，防止被header遮挡 */
+h2[id], h3[id], div[id] {
+    scroll-margin-top: 80px; /* 根据header高度调整 */
+}
+
+/* 改进目录链接样式 */
+.table-of-contents a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 4px 0;
+    transition: color 0.3s ease;
+}
+
+.table-of-contents a:hover {
+    color: #419f3b;
+}
+
+.table-of-contents ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.table-of-contents ul ul {
+    padding-left: 20px;
+}
+
+.table-of-contents li {
+    margin: 8px 0;
+}
+
+/* 当前阅读部分高亮显示 */
+.table-of-contents a.active {
+    color: #419f3b;
+    font-weight: bold;
+} 
