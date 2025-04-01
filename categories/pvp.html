@@ -114,119 +114,82 @@
             <h2>Popular PvP Games</h2>
             <div class="games-grid">
 
+                
                 <div class="game-card">
                     <div class="game-thumbnail">
-                        <img src="../images/games/mine-battles.jpg" alt="cuberealm-io">
-                        <a href="../games/cuberealm-io.html" class="play-button">
+                        <img src="../images/games/herobrine-vs-monster-school.jpg" alt="Herobrine vs Monster School">
+                        <a href="../games/herobrine-vs-monster-school.html" class="play-button">
                             <i class="fas fa-play"></i>
                         </a>
                     </div>
                     <div class="game-info">
-                        <h3>cuberealm-io</h3>
-                        <p>Fight against other players in various PvP arenas and game modes.</p>
+                        <h3>Herobrine vs Monster School</h3>
+                        <p>Take on the role of Herobrine and use your archery skills to defeat the misbehaving Monster School students!</p>
                         <span class="category">PvP</span>
                     </div>
                 </div>
                 
-<!--                 
-                <div class="game-card">
+
+
+
+                <!-- Popular PvP Games -->
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- All PvP Games with Pagination -->
+    <section class="all-category-games">
+        <div class="container">
+            <div class="section-header">
+                <h2>All PvP Games</h2>
+                <div class="sort-filter">
+                    <select id="games-sort">
+                        <option value="popular">Most Popular</option>
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                        <option value="rated">Highest Rated</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="games-grid all-games-list">
+                <!-- Page 1 Games -->
+                
+                <div class="game-card" data-page="1">
                     <div class="game-thumbnail">
-                        <img src="../images/games/block-arena.jpg" alt="Block Arena">
-                        <a href="../games/block-arena.html" class="play-button">
+                        <img src="../images/games/herobrine-vs-monster-school.jpg" alt="Herobrine vs Monster School">
+                        <a href="../games/herobrine-vs-monster-school.html" class="play-button">
                             <i class="fas fa-play"></i>
                         </a>
                     </div>
                     <div class="game-info">
-                        <h3>Block Arena</h3>
-                        <p>Enter the arena and defeat opponents in intense 1v1 combat.</p>
-                        <span class="category">PvP</span>
+                        <h3>Herobrine vs Monster School</h3>
+                        <p>Take on the role of Herobrine and use your archery skills to defeat the misbehaving Monster School students!</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.5</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 321,456</span>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="game-card">
-                    <div class="game-thumbnail">
-                        <img src="../images/games/sky-wars.jpg" alt="Sky Wars">
-                        <a href="../games/sky-wars.html" class="play-button">
-                            <i class="fas fa-play"></i>
-                        </a>
-                    </div>
-                    <div class="game-info">
-                        <h3>Sky Wars</h3>
-                        <p>Battle on floating islands and be the last player standing.</p>
-                        <span class="category">PvP</span>
-                    </div>
-                </div>
+
                 
-                <div class="game-card">
-                    <div class="game-thumbnail">
-                        <img src="../images/games/pixel-fighters.jpg" alt="Pixel Fighters">
-                        <a href="../games/pixel-fighters.html" class="play-button">
-                            <i class="fas fa-play"></i>
-                        </a>
-                    </div>
-                    <div class="game-info">
-                        <h3>Pixel Fighters</h3>
-                        <p>Fast-paced combat with special abilities and various character classes.</p>
-                        <span class="category">PvP</span>
-                    </div>
-                </div>
-                
-                <div class="game-card">
-                    <div class="game-thumbnail">
-                        <img src="../images/games/bed-wars.jpg" alt="Bed Wars">
-                        <a href="../games/bed-wars.html" class="play-button">
-                            <i class="fas fa-play"></i>
-                        </a>
-                    </div>
-                    <div class="game-info">
-                        <h3>Bed Wars</h3>
-                        <p>Protect your bed and destroy others' in this team-based strategy game.</p>
-                        <span class="category">PvP</span>
-                    </div>
-                </div>
-                
-                <div class="game-card">
-                    <div class="game-thumbnail">
-                        <img src="../images/games/battle-royale.jpg" alt="Battle Royale">
-                        <a href="../games/battle-royale.html" class="play-button">
-                            <i class="fas fa-play"></i>
-                        </a>
-                    </div>
-                    <div class="game-info">
-                        <h3>Battle Royale</h3>
-                        <p>Fight against 100 players in a shrinking arena to be the last one alive.</p>
-                        <span class="category">PvP</span>
-                    </div>
-                </div>
-                
-                <div class="game-card">
-                    <div class="game-thumbnail">
-                        <img src="../images/games/capture-the-flag.jpg" alt="Capture The Flag">
-                        <a href="../games/capture-the-flag.html" class="play-button">
-                            <i class="fas fa-play"></i>
-                        </a>
-                    </div>
-                    <div class="game-info">
-                        <h3>Capture The Flag</h3>
-                        <p>Team-based competition to capture the enemy's flag while defending yours.</p>
-                        <span class="category">PvP</span>
-                    </div>
-                </div>
-                
-                <div class="game-card">
-                    <div class="game-thumbnail">
-                        <img src="../images/games/block-warfare.jpg" alt="Block Warfare">
-                        <a href="../games/block-warfare.html" class="play-button">
-                            <i class="fas fa-play"></i>
-                        </a>
-                    </div>
-                    <div class="game-info">
-                        <h3>Block Warfare</h3>
-                        <p>Large-scale battles with different weapons, vehicles, and objectives.</p>
-                        <span class="category">PvP</span>
-                    </div>
-                </div> -->
-                
+                <!-- More game cards would go here -->
+
+
+            </div>
+            
+            <!-- Pagination Controls -->
+            <div class="pagination">
+                <button class="pagination-btn active" data-page="1">1</button>
+                <button class="pagination-btn" data-page="2">2</button>
+                <button class="pagination-btn" data-page="3">3</button>
+                <button class="pagination-btn" data-page="4">4</button>
+                <button class="pagination-next-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
         </div>
     </section>
