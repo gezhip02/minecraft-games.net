@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Allow: /categories/
+Allow: /articles/
+Allow: /about.html
+
+# Disallow access to utility files and directories
+Disallow: /js/
+Disallow: /css/
+Disallow: /*.py$
+Disallow: /*.txt$
+Disallow: /.git/
+
+# Sitemap location
+Sitemap: https://minecraft-games.net/sitemap.xml 
