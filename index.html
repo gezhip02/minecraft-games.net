@@ -298,11 +298,11 @@
     <section id="featured-games">
         <div class="container">
             <h2>Featured Minecraft Games</h2>
-            <div class="games-grid">
+            <div class="games-grid featured-games-grid">
 
 
 
-                <div class="game-card" data-category="adventure" data-page="1">
+                <div class="game-card" data-category="adventure">
                     <div class="game-thumbnail">
                         <img src="images/games/noob-trolls-pro.jpg" alt="Noob Trolls Pro">
                         <a href="games/noob-trolls-pro.html" class="play-button">
@@ -316,7 +316,7 @@
                     </div>
                 </div>
 
-                <div class="game-card" data-category="Survival" data-page="1">
+                <div class="game-card" data-category="survival">
                     <div class="game-thumbnail">
                         <img src="images/games/mine-blocks.jpg" alt="Mine Blocks">
                         <a href="games/mine-blocks.html" class="play-button">
@@ -330,7 +330,7 @@
                     </div>
                 </div>
 
-                <div class="game-card" data-category="survival" data-page="1">
+                <div class="game-card" data-category="survival">
                     <div class="game-thumbnail">
                         <img src="images/games/noob-miner-prison.jpg" alt="Noob Miner: Escape From Prison">
                         <a href="games/noob-miner-prison.html" class="play-button">
@@ -344,6 +344,22 @@
                         <span class="category">Survival</span>
                     </div>
                 </div>
+
+
+                <div class="game-card" data-category="survival">
+                    <div class="game-thumbnail">
+                        <img src="images/games/shooterz.jpg" alt="ShooterZ">
+                        <a href="games/shooterz.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>ShooterZ</h3>
+                        <p>Survive against hordes of zombies in this Minecraft-inspired first-person shooter!</p>
+                        <span class="category">Survival</span>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -353,17 +369,34 @@
         <div class="container">
             <div class="section-header">
                 <h2>All Minecraft Games</h2>
-                <div class="filter-controls">
+                <!-- <div class="filter-controls">
                     <button class="filter-btn active" data-filter="all">All</button>
                     <button class="filter-btn" data-filter="building">Building</button>
                     <button class="filter-btn" data-filter="survival">Survival</button>
                     <button class="filter-btn" data-filter="adventure">Adventure</button>
                     <button class="filter-btn" data-filter="pvp">PvP</button>
-                </div>
+                </div> -->
             </div>
 
             <div class="games-grid games-list">
-                <!-- Page 1 -->
+                <!-- Page 1 - Exactly 12 cards -->
+                <div class="game-card" data-category="survival" data-page="1">
+                    <div class="game-thumbnail">
+                        <img src="images/games/shooterz.jpg" alt="ShooterZ">
+                        <a href="games/shooterz.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>ShooterZ</h3>
+                        <p>Survive against hordes of zombies in this Minecraft-inspired first-person shooter!</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.7</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 332,105</span>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="game-card" data-category="adventure" data-page="1">
                     <div class="game-thumbnail">
                         <img src="images/games/noob-trolls-pro.jpg" alt="Noob Trolls Pro">
@@ -380,25 +413,6 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="game-card" data-category="Survival" data-page="1">
-                    <div class="game-thumbnail">
-                        <img src="images/games/mine-blocks.jpg" alt="Mine Blocks">
-                        <a href="games/mine-blocks.html" class="play-button">
-                            <i class="fas fa-play"></i>
-                        </a>
-                    </div>
-                    <div class="game-info">
-                        <h3>Mine Blocks</h3>
-                        <p>Explore, craft, and survive in this 2D Minecraft-inspired world with multiple game modes.</p>
-                        <div class="game-meta">
-                            <span class="rating"><i class="fas fa-star"></i> 4.8</span>
-                            <span class="plays"><i class="fas fa-gamepad"></i> 335,715</span>
-                        </div>
-                    </div>
-                </div>
-
-
 
                 <div class="game-card" data-category="survival" data-page="1">
                     <div class="game-thumbnail">
@@ -418,8 +432,568 @@
                     </div>
                 </div>
 
+                <div class="game-card" data-category="survival" data-page="1">
+                    <div class="game-thumbnail">
+                        <img src="images/games/noob-miner-2.jpg" alt="Noob Miner 2">
+                        <a href="games/noob-miner-2.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>Noob Miner 2</h3>
+                        <p>Join Noob on a mining adventure, upgrade your equipment, and discover rare treasures underground.</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.5</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 239,421</span>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="game-card" data-category="adventure" data-page="1">
+                    <div class="game-thumbnail">
+                        <img src="images/games/noob-island-escape.jpg" alt="Noob Island Escape">
+                        <a href="games/noob-island-escape.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>Noob Island Escape</h3>
+                        <p>Help Noob escape from a mysterious island by solving puzzles and overcoming obstacles.</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.6</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 267,855</span>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="game-card" data-category="survival" data-page="1">
+                    <div class="game-thumbnail">
+                        <img src="images/games/miner-cat-4.jpg" alt="Miner Cat 4">
+                        <a href="games/miner-cat-4.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>Miner Cat 4</h3>
+                        <p>Mine resources, avoid lava, and make money in this side-view Minecraft-inspired survival game!</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.4</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 215,327</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="adventure" data-page="1">
+                    <div class="game-thumbnail">
+                        <img src="images/games/miners-odyssey.jpg" alt="Miner's Odyssey">
+                        <a href="games/miners-odyssey.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>Miner's Odyssey</h3>
+                        <p>Embark on an epic mining adventure through various biomes filled with unique resources and enemies.</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.5</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 243,872</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="building" data-page="1">
+                    <div class="game-thumbnail">
+                        <img src="images/games/mineenergy-fun.jpg" alt="MineEnergy.fun">
+                        <a href="games/mineenergy-fun.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>MineEnergy.fun</h3>
+                        <p>Mine resources and build your ultimate energy production base with upgrades.</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 371,491</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="pvp" data-page="1">
+                    <div class="game-thumbnail">
+                        <img src="images/games/minecraft-tower-defense.jpg" alt="Minecraft Tower Defense">
+                        <a href="games/minecraft-tower-defense.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>Minecraft Tower Defense</h3>
+                        <p>Build and upgrade defensive towers to protect your base from waves of blocky enemies.</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.6</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 289,753</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="building" data-page="1">
+                    <div class="game-thumbnail">
+                        <img src="images/games/mineclicker.jpg" alt="MineClicker">
+                        <a href="games/mineclicker.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>MineClicker</h3>
+                        <p>Click to mine resources, unlock upgrades, and build an impressive mining empire.</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.7</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 312,684</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="building" data-page="1">
+                    <div class="game-thumbnail">
+                        <img src="images/games/minetap-merge-clicker.jpg" alt="MineTap Merge Clicker">
+                        <a href="games/minetap-merge-clicker.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>MineTap Merge Clicker</h3>
+                        <p>Mine resources, craft epic gear, and battle monsters in this exciting merge-based adventure.</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.6</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 302,875</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="pvp" data-page="1">
+                    <div class="game-thumbnail">
+                        <img src="images/games/mine-shooter.jpg" alt="Mine Shooter">
+                        <a href="games/mine-shooter.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>Mine Shooter</h3>
+                        <p>Engage in fast-paced blocky combat with various weapons and power-ups in this multiplayer shooter.</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 352,781</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Page 2 - Exactly 12 cards -->
+                <div class="game-card" data-category="pvp" data-page="2">
+                    <div class="game-thumbnail">
+                        <img src="images/games/miniblox.jpg" alt="MiniBlox">
+                        <a href="games/miniblox.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>MiniBlox</h3>
+                        <p>Challenge players in competitive minigames with blocky characters in various themed arenas.</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.6</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 291,432</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="survival" data-page="2">
+                    <div class="game-thumbnail">
+                        <img src="images/games/mine-clone.jpg" alt="Mine Clone">
+                        <a href="games/mine-clone.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>Mine Clone</h3>
+                        <p>Experience a faithful recreation of Minecraft's core gameplay in your browser with no downloads.</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.9</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 421,683</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="survival" data-page="2">
+                    <div class="game-thumbnail">
+                        <img src="images/games/mine-craft-io.jpg" alt="Mine-Craft.io">
+                        <a href="games/mine-craft-io.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>Mine-Craft.io</h3>
+                        <p>Gather resources, build shelters, and survive against monsters and other players in this immersive world.</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.5</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 286,743</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="pvp" data-page="2">
+                    <div class="game-thumbnail">
+                        <img src="images/games/voxiom-io.jpg" alt="Voxiom.io">
+                        <a href="games/voxiom-io.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>Voxiom.io</h3>
+                        <p>Competitive multiplayer voxel-based shooter with building mechanics and team-based gameplay.</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.7</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 312,945</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="pvp" data-page="2">
+                    <div class="game-thumbnail">
+                        <img src="images/games/kour-io.jpg" alt="Kour.io">
+                        <a href="games/kour-io.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>Kour.io</h3>
+                        <p>Parkour through challenging courses against other players in this fast-paced competitive game.</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.6</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 283,714</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="survival" data-page="2">
+                    <div class="game-thumbnail">
+                        <img src="images/games/mine-blocks.jpg" alt="Mine Blocks">
+                        <a href="games/mine-blocks.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>Mine Blocks</h3>
+                        <p>Explore, craft, and survive in this 2D Minecraft-inspired world with multiple game modes.</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 335,715</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="building" data-page="2">
+                    <div class="game-thumbnail">
+                        <img src="images/games/grindcraft.jpg" alt="GrindCraft">
+                        <a href="games/grindcraft.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>GrindCraft</h3>
+                        <p>Incremental clicker where you gather resources to unlock new items and tools in a blocky world.</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.5</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 297,164</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="survival" data-page="2">
+                    <div class="game-thumbnail">
+                        <img src="images/games/worldz.jpg" alt="WorldZ">
+                        <a href="games/worldz.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>WorldZ</h3>
+                        <p>3D survival with zombie challenges, resource collection, and crafting mechanics.</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.5</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 268,432</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="pvp" data-page="2">
+                    <div class="game-thumbnail">
+                        <img src="images/games/herobrine-vs-monster-school.jpg" alt="Herobrine vs Monster School">
+                        <a href="games/herobrine-vs-monster-school.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>Herobrine vs Monster School</h3>
+                        <p>Take on the role of Herobrine and use your archery skills to defeat the misbehaving Monster School students!</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.5</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 321,456</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="survival" data-page="2">
+                    <div class="game-thumbnail">
+                        <img src="images/games/war-of-mine.jpg" alt="War of Mine">
+                        <a href="games/war-of-mine.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>War of Mine</h3>
+                        <p>Survive in a war-torn blocky world by managing resources and making difficult moral choices.</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.7</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 275,321</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="adventure" data-page="2">
+                    <div class="game-thumbnail">
+                        <img src="images/games/dop-noob-draw.jpg" alt="DOP Noob">
+                        <a href="games/dop-noob.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>DOP Noob</h3>
+                        <p>Help Noob navigate through dangerous puzzles by drawing solutions and avoiding traps.</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.5</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 243,916</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="building" data-page="2">
+                    <div class="game-thumbnail">
+                        <img src="images/games/craft-world.jpg" alt="Craft World">
+                        <a href="games/craft-world.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>Craft World</h3>
+                        <p>Build your own custom world with unlimited blocks and share your creations with other players.</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.6</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 287,432</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 3 - Exactly 12 cards -->
+                <div class="game-card" data-category="pvp" data-page="3">
+                    <div class="game-thumbnail">
+                        <img src="images/games/stickman-epic.jpg" alt="Stickman Epic">
+                        <a href="games/stickman-epic.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>Stickman Epic</h3>
+                        <p>Battle with stickman characters in epic Minecraft-style arenas with various weapons and abilities.</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.6</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 267,914</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="adventure" data-page="3">
+                    <div class="game-thumbnail">
+                        <img src="images/games/paper-minecraft.jpg" alt="Paper Minecraft">
+                        <a href="games/paper-minecraft.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>Paper Minecraft</h3>
+                        <p>Experience Minecraft in a unique 2D paper art style while retaining all the core gameplay features.</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.7</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 302,148</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="pvp" data-page="3">
+                    <div class="game-thumbnail">
+                        <img src="images/games/pixel-warfare.jpg" alt="Pixel Warfare">
+                        <a href="games/pixel-warfare.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>Pixel Warfare</h3>
+                        <p>Intense multiplayer FPS with blocky graphics, multiple maps, and customizable loadouts.</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 345,762</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="adventure" data-page="3">
+                    <div class="game-thumbnail">
+                        <img src="images/games/skyblock-survive-with-noob.jpg" alt="Skyblock Survive With Noob!">
+                        <a href="games/skyblock-survive-with-noob.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>Skyblock Survive With Noob!</h3>
+                        <p>Explore, build, and survive on floating islands in this exciting sandbox adventure game!</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.7</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 273,509</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="pvp" data-page="3">
+                    <div class="game-thumbnail">
+                        <img src="images/games/stick-fighter-vs-zombies.jpg" alt="Stick Fighter vs Zombies">
+                        <a href="games/stick-fighter-vs-zombies.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>Stick Fighter vs Zombies</h3>
+                        <p>Fight waves of zombie stickmen with an arsenal of weapons in this action-packed defense game.</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.5</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 254,689</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="pvp" data-page="3">
+                    <div class="game-thumbnail">
+                        <img src="images/games/stickman-king.jpg" alt="Stickman King">
+                        <a href="games/stickman-king.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>Stickman King</h3>
+                        <p>Become the king of stickmen by defeating enemies, collecting resources, and building your kingdom.</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.6</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 243,872</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="survival" data-page="3">
+                    <div class="game-thumbnail">
+                        <img src="images/games/trap-craft.jpg" alt="Trap Craft">
+                        <a href="games/trap-craft.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>Trap Craft</h3>
+                        <p>Defend your base by setting creative traps and defeating waves of monsters with strategy.</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.7</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 263,491</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="survival" data-page="3">
+                    <div class="game-thumbnail">
+                        <img src="images/games/survival-craft-adventure.jpg" alt="Survival Craft Adventure">
+                        <a href="games/survival-craft-adventure.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>Survival Craft Adventure</h3>
+                        <p>Gather resources, craft tools, build shelters, and survive against monsters in this 2D-pixel survival game.</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.6</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 251,982</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="building" data-page="3">
+                    <div class="game-thumbnail">
+                        <img src="images/games/build-and-crush.jpg" alt="Build and Crush">
+                        <a href="games/build-and-crush.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>Build and Crush</h3>
+                        <p>Build impressive structures then demolish them with realistic physics in this destructive sandbox.</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 314,762</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="pvp" data-page="3">
+                    <div class="game-thumbnail">
+                        <img src="images/games/cuberealm-io.jpg" alt="CubeRealm.io">
+                        <a href="games/cuberealm-io.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>CubeRealm.io</h3>
+                        <p>Multiplayer cubic world where you can build, battle, and form alliances with other players.</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.7</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 293,741</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="building" data-page="3">
+                    <div class="game-thumbnail">
+                        <img src="images/games/castles-cc.jpg" alt="Castles.CC">
+                        <a href="games/castles-cc.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>Castles.CC</h3>
+                        <p>Build, trade, mine, and craft in this open world MMO game with a thriving community.</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.7</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 423,916</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="pvp" data-page="3">
+                    <div class="game-thumbnail">
+                        <img src="images/games/bloxd-io.jpg" alt="Bloxd.io">
+                        <a href="games/bloxd-io.html" class="play-button">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="game-info">
+                        <h3>Bloxd.io</h3>
+                        <p>Multiplayer puzzle platformer where you race against others through challenging blocky courses.</p>
+                        <div class="game-meta">
+                            <span class="rating"><i class="fas fa-star"></i> 4.6</span>
+                            <span class="plays"><i class="fas fa-gamepad"></i> 267,854</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Pagination Controls -->
@@ -485,7 +1059,8 @@
                 <!-- TODO -->
                 <article class="article-preview">
                     <div class="article-preview-thumbnail">
-                        <img src="images/articles/minecraft-top-10-building-techniques.jpg" alt="Minecraft Building Tips">
+                        <img src="images/articles/minecraft-top-10-building-techniques.jpg"
+                            alt="Minecraft Building Tips">
                         <a href="articles/minecraft-top-10-building-techniques.html" class="read-more-overlay">
                             <span>Read More</span>
                         </a>

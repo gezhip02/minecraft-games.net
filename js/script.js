@@ -118,16 +118,113 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // 确保分页功能在DOM加载完成后初始化
-    initPagination();
+    // Commented out as we're using our new implementation
+    // initPagination();
     
     // 初始化首页游戏筛选
-    initGameFilters();
+    // Commented out as we're using our new implementation
+    // initGameFilters();
     
     // 初始化文章页筛选
     initArticleFilters();
     
     // 初始化游戏类型页面排序
     initGameSorting();
+
+    // Handle game filtering for the main homepage
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const paginationButtons = document.querySelectorAll('.pagination-button');
+    const paginationNextBtn = document.querySelector('.pagination-next-btn');
+    const gamesList = document.querySelector('.games-list');
+
+    // Only initialize if we're on the homepage with games-list
+    if (gamesList) {
+        let currentFilter = 'all';
+        let currentPage = 1;
+        
+        // Function to filter and paginate games
+        function filterAndPaginateGames() {
+            // Important: Only select game cards from the games-list (All Minecraft Games section)
+            // This ensures we don't affect the Featured Minecraft Games section
+            const allGamesCards = document.querySelectorAll('.games-list .game-card');
+            
+            allGamesCards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                const cardPage = parseInt(card.getAttribute('data-page'));
+                
+                // First hide all cards
+                card.style.display = 'none';
+                
+                // Show cards that match both the current filter and current page
+                if ((currentFilter === 'all' || cardCategory === currentFilter) && cardPage === currentPage) {
+                    card.style.display = 'block';
+                }
+            });
+            
+            // Update active state on pagination buttons
+            paginationButtons.forEach(btn => {
+                const btnPage = parseInt(btn.getAttribute('data-page'));
+                if (btnPage === currentPage) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+        
+        // Filter button click handler
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+                
+                // Update button states
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Update current filter and reset to page 1
+                currentFilter = filter;
+                currentPage = 1;
+                
+                filterAndPaginateGames();
+            });
+        });
+        
+        // Pagination button click handler
+        paginationButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                currentPage = parseInt(this.getAttribute('data-page'));
+                filterAndPaginateGames();
+                
+                // Scroll to top of games section
+                document.querySelector('#all-games').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+        
+        // Next page button handler
+        if (paginationNextBtn) {
+            paginationNextBtn.addEventListener('click', function() {
+                const maxPage = Math.max(...Array.from(paginationButtons).map(btn => 
+                    parseInt(btn.getAttribute('data-page'))));
+                    
+                if (currentPage < maxPage) {
+                    currentPage++;
+                    filterAndPaginateGames();
+                    
+                    // Scroll to top of games section
+                    document.querySelector('#all-games').scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        }
+        
+        // Initial filtering
+        filterAndPaginateGames();
+    }
 });
 
 // Initialize sticky header with scroll detection

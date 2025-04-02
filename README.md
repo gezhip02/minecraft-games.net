@@ -70,7 +70,6 @@ The website includes several SEO optimizations:
 │   ├── 📁 articles/ (Article images)
 │   └── 📄 minecraft-banner.jpg (Banner image)
 ├── 📁 games/
-│   ├── 📄 blocky-craft.html (Game page)
 │   ├── 📄 mine-survival.html (Game page)
 │   └── 📄 ... (Other game pages)
 ├── 📁 categories/
