@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - minecraft-games.net</title>
+    <meta name="description" content="Search results for Minecraft games and articles at minecraft-games.net">
+    <meta name="robots" content="noindex">
+    <link rel="canonical" href="https://minecraft-games.net/index.html">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+    
+    <!-- Dark/Light Mode Toggle -->
+    <div class="mode-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+    
+    <!-- Cookie Consent -->
+    <div class="cookie-consent">
+        <div class="cookie-text">
+            <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+        </div>
+        <div class="cookie-btns">
+            <button class="cookie-btn accept-btn">Accept</button>
+            <button class="cookie-btn reject-btn">Reject</button>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><a href="index.html">Minecraft Games</a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories/building.html">Building</a></li>
+                    <li><a href="categories/survival.html">Survival</a></li>
+                    <li><a href="categories/adventure.html">Adventure</a></li>
+                    <li><a href="categories/pvp.html">PvP</a></li>
+                    <li><a href="articles/index.html">Articles</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+            <div class="search-container">
+                <form id="search-form">
+                    <input type="text" id="search-input" placeholder="Search games...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <main class="search-results-container">
+        <div class="container">
+            <div class="search-header">
+                <h1>Search Results</h1>
+                <p id="search-query-display">Showing results for: <span id="search-term"></span></p>
+            </div>
+            
+            <div class="search-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="games">Games</button>
+                <button class="filter-btn" data-filter="articles">Articles</button>
+            </div>
+            
+            <div id="search-results" class="search-results-grid">
+                <!-- Results will be dynamically inserted here -->
+                <div class="no-results">
+                    <p>Loading results...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <p>Minecraft Games is a fan-created website offering free online games inspired by Minecraft. We are not affiliated with Mojang or Microsoft.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="categories/building.html">Building Games</a></li>
+                        <li><a href="categories/survival.html">Survival Games</a></li>
+                        <li><a href="categories/adventure.html">Adventure Games</a></li>
+                        <li><a href="categories/pvp.html">PvP Games</a></li>
+                        <li><a href="articles/index.html">Articles</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023-2025 minecraft-games.net. All rights reserved.</p>
+                <p>This website is not affiliated with Mojang or Microsoft. Minecraft is a trademark of Mojang Synergies AB.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Parse the URL parameters to get the search query
+            const urlParams = new URLSearchParams(window.location.search);
+            const searchQuery = urlParams.get('q');
+            
+            // Display the search query
+            document.getElementById('search-term').textContent = searchQuery || '';
+            
+            if (!searchQuery) {
+                document.getElementById('search-results').innerHTML = `
+                    <div class="no-results">
+                        <p>No search query provided. Please try searching for something specific.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            // Here you would normally fetch search results from your backend
+            // For this static site, we'll simulate search results
+            simulateSearchResults(searchQuery);
+            
+            // Filter buttons functionality
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Update active state
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Apply filtering
+                    const filter = this.getAttribute('data-filter');
+                    filterResults(filter);
+                });
+            });
+        });
+        
+        function simulateSearchResults(query) {
+            // This function simulates fetching search results
+            // In a real implementation, you would call an API endpoint
+            
+            query = query.toLowerCase();
+            let results = '';
+            let matchCount = 0;
+            
+            // Sample data - in a real implementation this would come from your backend
+            const games = [
+                { title: "Mine Blocks", type: "games", url: "games/mine-blocks.html", image: "images/games/mine-blocks.jpg", description: "Classic Minecraft-style building game where you can craft and build in a 2D world." },
+                { title: "Mine Shooter", type: "games", url: "games/mine-shooter.html", image: "images/games/mine-shooter.jpg", description: "First-person shooter set in a Minecraft-inspired world." },
+                { title: "Craft World", type: "games", url: "games/craft-world.html", image: "images/games/craft-world.jpg", description: "Build and create in this sandbox construction game with over 300 blocks." },
+                { title: "Noob Miner: Escape From Prison", type: "games", url: "games/noob-miner-prison.html", image: "images/games/noob-miner-prison.jpg", description: "Mine resources and plan your escape from prison in this adventure game." },
+                { title: "Grindcraft", type: "games", url: "games/grindcraft.html", image: "images/games/grindcraft.jpg", description: "Incremental clicking game with Minecraft theme where you gather resources." }
+            ];
+            
+            const articles = [
+                { title: "Resource Collection Strategy Guide", type: "articles", url: "articles/resource-collection-strategy-guide.html", image: "images/articles/resource-collection-strategy-guide.jpg", description: "Master resource collection with our comprehensive guide to gathering rare materials efficiently." },
+                { title: "Top 10 Building Techniques", type: "articles", url: "articles/minecraft-top-10-building-techniques.html", image: "images/articles/minecraft-top-10-building-techniques.jpg", description: "Essential building techniques that will take your Minecraft constructions to the next level." },
+                { title: "Minecraft Movie Adventure", type: "articles", url: "articles/minecraft-movie-adventure-big-screen.html", image: "images/articles/minecraft-movie-adventure-big-screen.jpg", description: "Experience the epic journey as the Minecraft universe comes to life on the big screen." }
+            ];
+            
+            // Combine all content for searching
+            const allContent = [...games, ...articles];
+            
+            // Search through the content
+            const matchedResults = allContent.filter(item => {
+                return item.title.toLowerCase().includes(query) || 
+                       item.description.toLowerCase().includes(query);
+            });
+            
+            if (matchedResults.length > 0) {
+                matchCount = matchedResults.length;
+                
+                // Create HTML for each result
+                results = matchedResults.map(item => `
+                    <div class="search-result-card" data-type="${item.type}">
+                        <div class="search-result-img">
+                            <a href="${item.url}">
+                                <img src="${item.image}" alt="${item.title}">
+                            </a>
+                        </div>
+                        <div class="search-result-content">
+                            <h2><a href="${item.url}">${item.title}</a></h2>
+                            <p>${item.description}</p>
+                            <a href="${item.url}" class="btn">View ${item.type === 'games' ? 'Game' : 'Article'}</a>
+                        </div>
+                    </div>
+                `).join('');
+                
+                document.getElementById('search-results').innerHTML = results;
+                document.getElementById('search-query-display').textContent = `Found ${matchCount} results for: "${query}"`;
+            } else {
+                document.getElementById('search-results').innerHTML = `
+                    <div class="no-results">
+                        <p>No results found for "${query}". Please try another search term.</p>
+                    </div>
+                `;
+            }
+        }
+        
+        function filterResults(filter) {
+            const resultCards = document.querySelectorAll('.search-result-card');
+            
+            resultCards.forEach(card => {
+                if (filter === 'all' || card.getAttribute('data-type') === filter) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html> 
